@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ------- custom css here ----- -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons CSS --> 
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- -------- google font ----- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    
+    <title>Design Landing Page</title>
+</head>
+
+<body>
+     <!-- --- header here --- -->
+     <header>
+         <!-- ------ navbar here ---- -->
+         <nav class="navbar flex space-between">
+              <div class="logo"><img src="img/logo.svg" alt="logo"></div>
+              <ul class="menu-list flex">
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">ABOUT</a></li>
+                  <li><a href="#">HISTORY</a></li>
+                  <li><a href="#">BLOG</a></li>
+                  <li><a href="#">CONTACT</a></li>
+              </ul>
+              <div class="buttons flex">
+                 <button class="signin-btn">SIGN IN</button>
+                 <i class='bx bx-menu bar'></i>
+              </div>
+         </nav>
+         <!-- ------ navbar end here ---- -->
+     </header>
+     <!-- --- header end here --- -->
+     
+     <!-- ---- main --- -->
+     <main>
+
+         <!-- ---- home section start ---- -->
+           
+          <section class="home-section">
+                 <div class="home-content">
+                    <h1>Web Design</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore recusandae natus hic omnis et. Sit quis veritatis dignissimos nostrum.</p>
+                    <button class="learn-more-btn">LEARN MORE</button>
+                 </div>
+
+                 <div class="home-img">
+                      <img src="img/backcover.svg" id="backcover">
+                      <img src="img/intro-img.svg" id="intro" alt="">
+                      <img src="img/vector.svg" id="vector">
+                      <img src="img/vector-dot.svg" id="dot" alt="">
+                 </div>
+          </section>
+
+         <!-- ---- home section end ---- -->
+    
+        </main>
+     <!-- ---- main end  --- -->
+
+     <!-- ----- js here----- -->
+     <script>
+
+        const header = document.querySelector('header'),
+        header_img = document.querySelector('header img'),
+        menu = document.querySelector(".menu-list"),
+        bar = document.querySelector(".bar");
+        
+        bar.addEventListener("click",()=>{
+            menu.classList.toggle("active");
+            bar.classList.toggle("bx-x");
+        });
+
+       window.onscroll = (()=>{
+           if(window.scrollY > 15){
+              header.classList.add("active");
+              header_img.classList.add("active");
+              menu.classList.add("active1");
+           }else{
+            header.classList.remove('active');
+            header_img.classList.remove("active");
+            menu.classList.remove("active1");
+           }
+       });
+     </script>
+</body>
+
+</html>
